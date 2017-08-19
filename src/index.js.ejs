@@ -1,0 +1,74 @@
+<%
+/* example by https://github.com/jaketrent/html-webpack-template */
+var item, key
+var config = require('./config.ejs')
+htmlWebpackPlugin.options.baseHref = htmlWebpackPlugin.options.baseHref || '/'
+%>
+var appScripts = [];
+var appStyles = [];
+
+function loadStyle(arrayOfUrlStrings){
+	var head = document.getElementsByTagName("head")[0];
+	for (var file of arrayOfUrlStrings){
+		var path = file;
+		var link = document.createElement("link");
+		link.href = path;
+		link.type = "text/css";
+		link.rel = "stylesheet";
+		head.appendChild(link);
+	}
+}
+
+function loadScript(arrayOfUrlStrings, callback) {
+	var numScripts = arrayOfUrlStrings.length;
+	var count = 0;
+	var headElement = document.getElementsByTagName('head')[0];
+
+	function onLoad() {
+		count += 1;
+
+		if (count === numScripts) {
+			if(callback) {
+				callback();
+			}
+		} else {
+			addScript();
+		}
+	}
+
+	function addScript() {
+		var script = document.createElement('script');
+		script.src = arrayOfUrlStrings[count];
+		script.onload = onLoad;
+		headElement.appendChild(script);
+	}
+
+	addScript();
+}
+
+<% for (key in config.options.css) {
+%>appStyles.push(window.appConfigJson.baseURLComplements + "<%= config.options.css[key] %>");<%
+} %>
+
+<% if (config.options.scripts) { %>
+	<% for (item of config.options.scripts) { %>
+	<% if (typeof item === 'string' || item instanceof String) { %>
+appScripts.push(window.appConfigJson.baseURLComplements + "<%= item %>");
+	<% } %>
+	<% } %>
+<% } %>
+
+<% if (htmlWebpackPlugin.options.scripts) {
+	for (item of htmlWebpackPlugin.options.scripts) {
+		if (typeof item.src === 'string' || item.src instanceof String) { %>
+appScripts.push(window.appConfigJson.baseURLComplements + "<%= item.src %>");<%
+		}
+	}
+} %>
+
+<% for (key in htmlWebpackPlugin.options.outPutFiles) {
+	%>appScripts.push(window.appConfigJson.baseURLComplements + "<%= htmlWebpackPlugin.options.outPutFiles[key] %>");<%
+} %>
+
+loadScript(appScripts);
+loadStyle(appStyles);

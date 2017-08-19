@@ -1,0 +1,49 @@
+<%
+var config = require('./config.ejs')
+htmlWebpackPlugin.options.baseHref = htmlWebpackPlugin.options.baseHref || '/'
+%><!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title><%= htmlWebpackPlugin.options.title %></title>
+
+		<% if (htmlWebpackPlugin.options.baseHref) { %>
+		<base href="<%= htmlWebpackPlugin.options.baseHref %>">
+		<% } %>
+		<% for (key in htmlWebpackPlugin.files.css) { %>
+		<link rel="stylesheet" media="all" href="<%= htmlWebpackPlugin.options.baseHref %><%= htmlWebpackPlugin.files.css[key] %>" />
+		<% } %>
+		<% if (!!config.options.cssInBody && !!config.options.cssInBody.length) { %>
+			<style type="text/css" media="screen">
+			<% for (key in config.options.cssInBody) { %>
+				<%= config.options.cssInBody[key] %>
+			<% } %>
+			</style>
+		<% } %>
+
+	</head>
+	<body>
+	<div id="app">
+		<div class="row">
+			<div class="col-md-12 center-block text-center">
+				<p>
+					Aguarde um momento...
+				</p>
+				<h1>Carregando experiência...</h1>
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+		window.appConfigJson = {};
+		window.appConfigJson.baseURLComplements = '<%= htmlWebpackPlugin.options.baseHref %>/'.replace(/\/\//g, '/');
+	</script>
+	<script src="<%= htmlWebpackPlugin.options.baseHref %><%= htmlWebpackPlugin.options.pathStructureBase %>index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
