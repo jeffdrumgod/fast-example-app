@@ -17,7 +17,7 @@
 		"import/core-modules": [ "Elements", "Components" ]
 	},
 	"globals": {
-		"contaazul": true,
+		"FastExampleApp": true,
 		"$": true,
 		"_": true,
 		"moment": true,

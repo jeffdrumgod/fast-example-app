@@ -45,7 +45,7 @@ Config.outPutFilesHtml = [
 Config.output = {
 	filename   	: '[name].js',
 	path       	: Config.bundlePath,
-	library		: ['contaazul', 'react', '[name]'],
+	library		: ['FastExampleApp', 'react', '[name]'],
 };
 
 Config.resolve = {
@@ -88,7 +88,7 @@ Config.ExtraOptions = {
 		scripts: []
 	},
 	HTMLWebpackPlugin2: {
-		title: 'ContaAzul',
+		title: 'Fast Example App',
 		filename: 'index.html',
 		template: Path.join(Config.srcPath, 'index.html.ejs'),
 		inject: false,
