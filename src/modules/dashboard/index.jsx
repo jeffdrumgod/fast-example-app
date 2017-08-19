@@ -1,5 +1,7 @@
 import Modules from 'Modules/index.js';
 
+const { Link } = ReactRouterDOM;
+
 const dashboard = () => {
 	console.log(Modules);
 	return (
@@ -14,7 +16,7 @@ const dashboard = () => {
 
 					return (
 						<li key={item}>
-							<a href={`/${item}`}>{item}</a>
+							<Link to={`/${item}`}>{item}</Link>
 						</li>
 					);
 				})}
