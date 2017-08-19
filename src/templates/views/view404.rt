@@ -1,0 +1,15 @@
+<rt-import name="*" as="Header" from="../parts/Header.rt" />
+<rt-import name="*" as="Footer" from="../parts/Footer.rt" />
+<div rt-stateless className="all">
+	<Header />
+	<main>
+		<div class="row">
+			<div class="col-md-12 center-block text-center">
+				<h1>Ops... 404</h1>
+				<p>No match for <code>{location.pathname}</code></p>
+			</div>
+			<div rt-if="!!props.children">{props.children}</div>
+		</div>
+	</main>
+	<Footer />
+</div>

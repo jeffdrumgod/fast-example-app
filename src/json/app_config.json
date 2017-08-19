@@ -1,0 +1,10 @@
+{
+	"baseURL": "/",
+	"baseDashboard": "/",
+	"validRoutes": {
+		"vehicles": {
+			"component": "vehicles",
+			"actions": ["add","edit"]
+		}
+	}
+}

@@ -1,0 +1,7 @@
+<rt-import name="*" as="Header" from="./parts/Header.rt" />
+<rt-import name="*" as="Footer" from="./parts/Footer.rt" />
+<div rt-stateless className="all {props.mainClass || 'default'}">
+	<Header rt-props="props" />
+	<main>{props.children}</main>
+	<Footer rt-props="props" />
+</div>
