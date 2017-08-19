@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import * as fs from 'fs';
 import ConfigPackage from '../package.json';
 import Path from 'path';
 import Webpack  from 'webpack';
@@ -10,6 +11,7 @@ import languages from './languages.js';
 import webpackExternalsFromNodeModule from './webpack/externalsFromNodeModule.js';
 import webpackRules from './webpack/rules.js';
 import webpackProvidePlugin from './webpack/providePlugin.js';
+import automodules from './webpack/automodules.js';
 
 let Config = {};
 
@@ -19,11 +21,13 @@ Config.node_modules    			= Path.resolve(Config.root, 'node_modules');
 Config.bundlePath    			= Path.join(Config.root, 'dist');
 Config.srcPath       			= Path.join(Config.root, 'src');
 Config.srcThemePath = Path.join(Config.root, 'themes');
+Config.ModulesFileIndex   		= Path.join(Config.srcPath, 'js', 'modules', 'index.js');
 Config.bundleVendorsPathName    = 'vendors';
 Config.srcPathsJs      			= {
 	Templates: Path.join(Config.srcPath, 'templates'),
-	Modules: Path.join(Config.srcPath, 'modules'),
+	Modules: Path.join(Config.srcPath, 'js', 'modules'),
 };
+
 Config.environment = '';
 switch (process.env.npm_lifecycle_event) {
 	case 'start':
@@ -37,6 +41,10 @@ switch (process.env.npm_lifecycle_event) {
 Config.entryFiles = {
 	'Index': Path.resolve(Path.join(Config.srcPath, 'js', 'Index.jsx'))
 };
+
+
+const automodulesConfig = automodules(Config);
+fs.writeFileSync(Config.ModulesFileIndex, automodulesConfig, 'utf8');
 
 Config.outPutFilesHtml = [
 	['Index.js']
