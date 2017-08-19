@@ -21,7 +21,8 @@ Config.srcPath       			= Path.join(Config.root, 'src');
 Config.srcThemePath = Path.join(Config.root, 'themes');
 Config.bundleVendorsPathName    = 'vendors';
 Config.srcPathsJs      			= {
-	Templates: Path.join(__dirname, '..', 'src', 'templates'),
+	Templates: Path.join(Config.srcPath, 'templates'),
+	Modules: Path.join(Config.srcPath, 'modules'),
 };
 Config.environment = '';
 switch (process.env.npm_lifecycle_event) {
@@ -53,7 +54,12 @@ Config.resolve = {
 		Config.srcPathsJs.Templates
 	],
 	extensions : ['.css', '.scss', '.js', '.jsx', '.rt'],
-	alias: {}
+	alias: {
+		src: Config.srcPath,
+		Modules: Config.srcPathsJs.Modules,
+		Templates: Config.srcPathsJs.Templates,
+		Redux: Path.join(Config.srcPath, 'js', 'redux'),
+	}
 };
 
 Config.externalsFromNodeModule = webpackExternalsFromNodeModule(Config);

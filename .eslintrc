@@ -14,7 +14,7 @@
 		}
 	},
 	"settings": {
-		"import/core-modules": [ "Elements", "Components" ]
+		"import/core-modules": [ "Templates", "Modules", "Redux" ]
 	},
 	"globals": {
 		"$": true,
@@ -57,12 +57,12 @@
 		"react/prefer-stateless-function": 0,
 		"react/forbid-component-props": 0,
 		"import/no-extraneous-dependencies": 0,
-		"import/no-unresolved": [2, { ignore: ['Elements', 'Components'] }],
-		"import/extensions": ['off', 'never'],
+		"import/no-unresolved": [2, { ignore: ["Templates", "Modules", "Redux"] }],
+		"import/extensions": ["off", "never"],
 		"react/forbid-prop-types": 0,
 		"react/react-in-jsx-scope": 0,
 		"react/jsx-closing-bracket-location": 0,
-		"react/jsx-first-prop-new-line": [1, 'multiline-multiprop'],
+		"react/jsx-first-prop-new-line": [1, "multiline-multiprop"],
 		"comma-dangle": [1, {
 			"arrays": "only-multiline",
 			"objects": "only-multiline",
