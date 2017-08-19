@@ -21,11 +21,11 @@ Config.node_modules    			= Path.resolve(Config.root, 'node_modules');
 Config.bundlePath    			= Path.join(Config.root, 'dist');
 Config.srcPath       			= Path.join(Config.root, 'src');
 Config.srcThemePath = Path.join(Config.root, 'themes');
-Config.ModulesFileIndex   		= Path.join(Config.srcPath, 'js', 'modules', 'index.js');
+Config.ModulesFileIndex   		= Path.join(Config.srcPath, 'modules', 'index.js');
 Config.bundleVendorsPathName    = 'vendors';
 Config.srcPathsJs      			= {
 	Templates: Path.join(Config.srcPath, 'templates'),
-	Modules: Path.join(Config.srcPath, 'js', 'modules'),
+	Modules: Path.join(Config.srcPath, 'modules'),
 };
 
 Config.environment = '';
