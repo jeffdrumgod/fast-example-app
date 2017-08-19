@@ -33,8 +33,10 @@ const Routes = (appConfig) => {
 
 					return (
 						<View404 {...props}>
-							Não existe módulo com nome <code>dashboard</code>.
-							Crie ou altere o valor de configuração para <code>baseDashboard</code>
+							The module name <code>dashboard</code> does not exist.
+							<br />
+							Create <code>dashboard</code> module or change value for
+							<code>baseDashboard</code> in app_config.json
 						</View404>
 					);
 				}
@@ -51,7 +53,7 @@ const Routes = (appConfig) => {
 
 				return (
 					<View404 {...props}>
-						Por favor, verifique suas configurações para <code>baseDashboard</code>
+						Please, verify config entry <code>baseDashboard</code>
 					</View404>
 				);
 			},
@@ -73,7 +75,7 @@ const Routes = (appConfig) => {
 				}
 
 				if (!{}.hasOwnProperty.call(Modules, module.component)) {
-					console.error('👾  Module.component not exist in Modules app');
+					console.error(`👾  the component "${module}" does not exist in Modules path`);
 					return (
 						<View404 {...props} />
 					);
