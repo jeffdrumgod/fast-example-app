@@ -3,7 +3,6 @@ import Modules from 'Modules/index.js';
 const { Link } = ReactRouterDOM;
 
 const dashboard = () => {
-	console.log(Modules);
 	return (
 		<div>
 			<h1>Dashboard - Ready!</h1>
