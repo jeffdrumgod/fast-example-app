@@ -1,6 +1,6 @@
 import configureStore from 'Redux/configureStore';
 import rootSaga from 'Redux/sagas/config';
-import AppConfigModule from 'Redux/modules/config';
+import AppConfigReducer from 'Redux/reducers/config';
 import Container from './Container';
 
 const { combineReducers } = Redux;
@@ -9,7 +9,7 @@ const { routerReducer } = ReactRouterRedux;
 // creating reducer
 const reducer = combineReducers({
 	routing: routerReducer,
-	app_config: AppConfigModule,
+	app_config: AppConfigReducer,
 });
 
 const { createBrowserHistory } = History;
@@ -21,7 +21,7 @@ const initialState = {};
 // creating default Browser History application
 const customHistory = createBrowserHistory();
 // creating store
-const store = configureStore(reducer, rootSaga, customHistory, initialState);
+const store = configureStore(reducer, 'App', rootSaga, customHistory, initialState);
 // sync History with previous created Store
 const history = syncHistoryWithStore(customHistory, store);
 
