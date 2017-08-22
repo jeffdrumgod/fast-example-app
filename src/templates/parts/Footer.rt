@@ -1,1 +1,1 @@
-<footer></footer>
+<footer rt-stateless className="main-footer">{(props.footer || {}).children || false}</footer>

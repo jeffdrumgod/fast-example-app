@@ -1,1 +1,1 @@
-<header></header>
+<header rt-stateless className="main-header">{(props.header || {}).children || false}</header>

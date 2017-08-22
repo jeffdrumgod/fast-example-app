@@ -15,6 +15,7 @@ htmlWebpackPlugin.options.baseHref = htmlWebpackPlugin.options.baseHref || '/'
 		<% if (htmlWebpackPlugin.options.baseHref) { %>
 		<base href="<%= htmlWebpackPlugin.options.baseHref %>">
 		<% } %>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 		<% for (key in htmlWebpackPlugin.files.css) { %>
 		<link rel="stylesheet" media="all" href="<%= htmlWebpackPlugin.options.baseHref %><%= htmlWebpackPlugin.files.css[key] %>" />
 		<% } %>
@@ -25,7 +26,6 @@ htmlWebpackPlugin.options.baseHref = htmlWebpackPlugin.options.baseHref || '/'
 			<% } %>
 			</style>
 		<% } %>
-		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 	</head>
 	<body>
 	<div id="app">

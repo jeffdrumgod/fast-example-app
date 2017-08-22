@@ -84,6 +84,10 @@ let prd = {
 			)
 		),
 		new CopyWebpackPlugin(
+			Config.ExtraOptions.CopyWebpackPluginModules,
+			Config.ExtraOptions.CopyWebpackPluginModulesOptions
+		),
+		new CopyWebpackPlugin(
 			_.reduce(
 				Config.ExtraOptions.CopyWebpackPlugin,
 				(that, e, i) => {
