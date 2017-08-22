@@ -75,6 +75,21 @@ Config.rules = webpackRules(Config);
 
 Config.ExtraOptions = {
 	ProvidePlugin: webpackProvidePlugin,
+	CopyWebpackPluginModulesOptions: {
+		ignore: [
+			'**/*.scss',
+			'**/*.jsx',
+			'**/redux/**',
+			'**/templates/**',
+			'**/index.js',
+		],
+	},
+	CopyWebpackPluginModules: [
+		{
+			from: Path.join(Config.srcPathsJs.Modules),
+			to: Path.join(Config.bundlePath, 'modules')
+		},
+	],
 	CopyWebpackPlugin: [
 		{
 			from: Path.join(Config.srcPath, 'json'),
