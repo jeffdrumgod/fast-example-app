@@ -36,7 +36,25 @@ class VehiclesList extends Component {
 			placa: { label: 'Placa' },
 			modelo: { label: 'Modelo' },
 			marca: { label: 'Marca' },
-			foto: { label: 'Foto' },
+			imagem: {
+				label: 'Foto',
+				modifier: (value) => {
+					if (!value) {
+						return (
+							<span className="no-image">Sem foto</span>
+						);
+					}
+					return (
+						<a {...{
+							href: value,
+							className: 'image',
+							target: '_blank',
+						}}>
+							imagem
+						</a>
+					);
+				}
+			},
 			combustivel: { label: 'Combustível' },
 			valor: {
 				label: 'Valor',
@@ -48,6 +66,7 @@ class VehiclesList extends Component {
 					return value;
 				}
 			},
+			optionLast: { },
 		};
 	}
 
@@ -56,6 +75,11 @@ class VehiclesList extends Component {
 	}
 
 	onSelectOption(item, event) {
+		console.log(this, item, event);
+	}
+
+	onChangePage(item, event) {
+		event.preventDefault();
 		console.log(this, item, event);
 	}
 

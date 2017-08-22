@@ -102,8 +102,11 @@ class Module extends Component {
 
 	render() {
 		return (
-			<Base>
-				<HeaderVehicles />
+			<Base {...{
+				header: {
+					children: <HeaderVehicles />
+				}
+			}}>
 				<BrowserRouter history={this.props.history}>
 					<Switch>
 						{this.getRoutes(this.props.appConfig).map(route => (
