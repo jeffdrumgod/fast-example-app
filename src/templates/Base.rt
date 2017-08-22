@@ -2,6 +2,6 @@
 <rt-import name="*" as="Footer" from="./parts/Footer.rt" />
 <div rt-stateless className="all {props.mainClass || 'default'}">
 	<Header rt-props="props" />
-	<main>{props.children}</main>
+	<main className="container">{props.children}</main>
 	<Footer rt-props="props" />
 </div>

@@ -47,13 +47,13 @@ function loadScript(arrayOfUrlStrings, callback) {
 }
 
 <% for (key in config.options.css) {
-%>appStyles.push(window.appConfigJson.baseURLComplements + "<%= config.options.css[key] %>");<%
+%>appStyles.push(<% if(config.options.css[key].indexOf('http') !== 0) { %>window.appConfigJson.baseURLComplements + <% } %>"<%= config.options.css[key] %>");<%
 } %>
 
 <% if (config.options.scripts) { %>
 	<% for (item of config.options.scripts) { %>
 	<% if (typeof item === 'string' || item instanceof String) { %>
-appScripts.push(window.appConfigJson.baseURLComplements + "<%= item %>");
+appScripts.push(<% if(item.indexOf('http') !== 0) { %>window.appConfigJson.baseURLComplements + <% } %>"<%= item %>");
 	<% } %>
 	<% } %>
 <% } %>
@@ -61,7 +61,7 @@ appScripts.push(window.appConfigJson.baseURLComplements + "<%= item %>");
 <% if (htmlWebpackPlugin.options.scripts) {
 	for (item of htmlWebpackPlugin.options.scripts) {
 		if (typeof item.src === 'string' || item.src instanceof String) { %>
-appScripts.push(window.appConfigJson.baseURLComplements + "<%= item.src %>");<%
+appScripts.push(<% if(item.src.indexOf('http') !== 0) { %>window.appConfigJson.baseURLComplements + <% } %>"<%= item.src %>");<%
 		}
 	}
 } %>
