@@ -4,8 +4,8 @@
 <div>
 	<div className="row header-complement">
 		<div className="row">
-			<div className="col-sm-3">
-				<button class="button btn-success" type="button">Novo Carro</button>
+			<div className="col-sm-3" rt-scope="">
+				<ReactRouterDOM.Link to="/vehicles/add" class="btn btn-primary new-vehicle" type="button">Novo Carro</ReactRouterDOM.Link>
 			</div>
 			<div className="col-sm-6" />
 			<div className="col-sm-3">
@@ -21,6 +21,8 @@
 		}" />
 	</div>
 	<div className="row vehicles-pagination">
-		<Pagination />
+		<Pagination rt-props="{
+			onChangePage: this.onChangePage
+		}" />
 	</div>
 </div>

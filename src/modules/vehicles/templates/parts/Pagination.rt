@@ -1,18 +1,18 @@
-<nav class="wrap-pagination">
-	<ul class="pagination">
-		<li>
-			<a href="#" aria-label="Previous">
-				<span aria-hidden="true">«</span>
+<nav className="wrap-pagination" rt-stateless>
+	<ul className="pagination">
+		<li className="prev">
+			<a href="#" aria-label="Previous" onClick="{props.onChangePage}">
+				<span aria-hidden="true" className="fa fa-angle-double-left"></span>
 			</a>
-			</li>
-			<li><a href="#">1</a></li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">5</a></li>
-			<li>
-				<a href="#" aria-label="Next">
-				<span aria-hidden="true">»</span>
+		</li>
+		<li className="active"><a href="#" onClick="{props.onChangePage}">1</a></li>
+		<li><a href="#" onClick="{props.onChangePage}">2</a></li>
+		<li><a href="#" onClick="{props.onChangePage}">3</a></li>
+		<li><a href="#" onClick="{props.onChangePage}">4</a></li>
+		<li><a href="#" onClick="{props.onChangePage}">5</a></li>
+		<li className="next">
+			<a href="#" aria-label="Next" onClick="{props.onChangePage}">
+				<span aria-hidden="true" className="fa fa-angle-double-right"></span>
 			</a>
 		</li>
 	</ul>
