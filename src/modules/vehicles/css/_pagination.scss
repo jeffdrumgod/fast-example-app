@@ -1,3 +1,44 @@
 .wrap-pagination{
 	text-align: center;
 }
+.pagination {
+	> li {
+		> a,
+		> span{
+			min-width: 40px;
+			min-height: 40px;
+			max-height: 40px;
+			padding: 9px 14px;
+			color: $color-font-default;
+		}
+		> a:focus,
+		> a:hover,
+		> span:focus,
+		> span:hover {
+			background-color: $color-bg-box-hover;
+			color: $color-font-default;
+		}
+
+		&.active {
+			> a,
+			> a:focus,
+			> a:hover,
+			> span,
+			> span:focus,
+			> span:hover{
+				border-color: $color-border-box-active;
+				background: $color-bg-box-active;
+				color: $color-font-default;
+			}
+		}
+
+		&.prev,
+		&.next{
+			> a,
+			> span{
+				font-size: 20px;
+				padding-top: 6px;
+			}
+		}
+	}
+}

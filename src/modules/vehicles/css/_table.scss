@@ -1,0 +1,47 @@
+.table{
+	border: 1px solid $color-border-default;
+	color: $color-font-default;
+	background-color: #FFF;
+	font-family: 'proximanova-light', sans-serif;
+
+	thead{
+		background-color: $table-bg-thead;
+		> tr > th{
+			border-bottom: 1px solid $color-border-default;
+			padding: 9px 4px 10px;
+		}
+	}
+
+	> tbody {
+		> tr{
+			&:hover{
+				background-color: $color-bg-box-hover;
+			}
+			> td{
+				padding: 15px 4px 14px;
+			}
+		}
+	}
+	/*===============================================
+	=            ajustes finos de tabela            =
+	===============================================*/
+
+	.placa{
+		min-width: 78px;
+	}
+	.option,
+	.optionLast{
+		width: 38px;
+		text-align: center;
+	}
+	.valor{
+		text-align: right;
+		max-width: 50px;
+	}
+	/*=====  End of ajustes finos de tabela  ======*/
+
+	a{
+		text-decoration: underline;
+		color: #318deb;
+	}
+}

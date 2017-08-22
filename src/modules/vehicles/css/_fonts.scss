@@ -1,0 +1,285 @@
+@font-face {
+	font-family: 'proximanova-thin';
+	src: url($font-path + 'proximanova-thin.eot');
+	src: url($font-path + 'proximanova-thin.eot?#iefix') format('embedded-opentype'),
+		 url($font-path + 'proximanova-thin.woff2') format('woff2'),
+		 url($font-path + 'proximanova-thin.woff') format('woff'),
+		 url($font-path + 'proximanova-thin.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'proximanova-light';
+	src: url($font-path + 'proximanova-light.eot');
+	src: url($font-path + 'proximanova-light.eot?#iefix') format('embedded-opentype'),
+		 url($font-path + 'proximanova-light.woff2') format('woff2'),
+		 url($font-path + 'proximanova-light.woff') format('woff'),
+		 url($font-path + 'proximanova-light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'proximanova-regular';
+	src: url($font-path + 'proximanova-regular.eot');
+	src: url($font-path + 'proximanova-regular.eot?#iefix') format('embedded-opentype'),
+		 url($font-path + 'proximanova-regular.woff2') format('woff2'),
+		 url($font-path + 'proximanova-regular.woff') format('woff'),
+		 url($font-path + 'proximanova-regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'proximanova-semibold';
+	src: url($font-path + 'proximanova-semibold.eot');
+	src: url($font-path + 'proximanova-semibold.eot?#iefix') format('embedded-opentype'),
+		 url($font-path + 'proximanova-semibold.woff2') format('woff2'),
+		 url($font-path + 'proximanova-semibold.woff') format('woff'),
+		 url($font-path + 'proximanova-semibold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'proximanova-bold';
+	src: url($font-path + 'proximanova-bold.eot');
+	src: url($font-path + 'proximanova-bold.eot?#iefix') format('embedded-opentype'),
+		 url($font-path + 'proximanova-bold.woff2') format('woff2'),
+		 url($font-path + 'proximanova-bold.woff') format('woff'),
+		 url($font-path + 'proximanova-bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'proximanova-extrabold';
+	src: url($font-path + 'proximanova-extrabold.eot');
+	src: url($font-path + 'proximanova-extrabold.eot?#iefix') format('embedded-opentype'),
+		 url($font-path + 'proximanova-extrabold.woff2') format('woff2'),
+		 url($font-path + 'proximanova-extrabold.woff') format('woff'),
+		 url($font-path + 'proximanova-extrabold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'proximanova-black';
+	src: url($font-path + 'proximanova-black.eot');
+	src: url($font-path + 'proximanova-black.eot?#iefix') format('embedded-opentype'),
+		 url($font-path + 'proximanova-black.woff2') format('woff2'),
+		 url($font-path + 'proximanova-black.woff') format('woff'),
+		 url($font-path + 'proximanova-black.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'proximanova-thin-italic';
+	src: url($font-path + 'proximanova-thin-italic.eot');
+	src: url($font-path + 'proximanova-thin-italic.eot?#iefix') format('embedded-opentype'),
+		 url($font-path + 'proximanova-thin-italic.woff2') format('woff2'),
+		 url($font-path + 'proximanova-thin-italic.woff') format('woff'),
+		 url($font-path + 'proximanova-thin-italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'proximanova-light-italic';
+	src: url($font-path + 'proximanova-light-italic.eot');
+	src: url($font-path + 'proximanova-light-italic.eot?#iefix') format('embedded-opentype'),
+		 url($font-path + 'proximanova-light-italic.woff2') format('woff2'),
+		 url($font-path + 'proximanova-light-italic.woff') format('woff'),
+		 url($font-path + 'proximanova-light-italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'proximanova-regular-italic';
+	src: url($font-path + 'proximanova-regular-italic.eot');
+	src: url($font-path + 'proximanova-regular-italic.eot?#iefix') format('embedded-opentype'),
+		 url($font-path + 'proximanova-regular-italic.woff2') format('woff2'),
+		 url($font-path + 'proximanova-regular-italic.woff') format('woff'),
+		 url($font-path + 'proximanova-regular-italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'proximanova-semibold-italic';
+	src: url($font-path + 'proximanova-semibold-italic.eot');
+	src: url($font-path + 'proximanova-semibold-italic.eot?#iefix') format('embedded-opentype'),
+		 url($font-path + 'proximanova-semibold-italic.woff2') format('woff2'),
+		 url($font-path + 'proximanova-semibold-italic.woff') format('woff'),
+		 url($font-path + 'proximanova-semibold-italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'proximanova-bold-italic';
+	src: url($font-path + 'proximanova-bold-italic.eot');
+	src: url($font-path + 'proximanova-bold-italic.eot?#iefix') format('embedded-opentype'),
+		 url($font-path + 'proximanova-bold-italic.woff2') format('woff2'),
+		 url($font-path + 'proximanova-bold-italic.woff') format('woff'),
+		 url($font-path + 'proximanova-bold-italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'proximanovacond-thin';
+	src: url($font-path + 'proximanovacond-thin.eot');
+	src: url($font-path + 'proximanovacond-thin.eot?#iefix') format('embedded-opentype'),
+		 url($font-path + 'proximanovacond-thin.woff2') format('woff2'),
+		 url($font-path + 'proximanovacond-thin.woff') format('woff'),
+		 url($font-path + 'proximanovacond-thin.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'proximanovacond-light';
+	src: url($font-path + 'proximanovacond-light.eot');
+	src: url($font-path + 'proximanovacond-light.eot?#iefix') format('embedded-opentype'),
+		 url($font-path + 'proximanovacond-light.woff2') format('woff2'),
+		 url($font-path + 'proximanovacond-light.woff') format('woff'),
+		 url($font-path + 'proximanovacond-light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'proximanovacond-regular';
+	src: url($font-path + 'proximanovacond-regular.eot');
+	src: url($font-path + 'proximanovacond-regular.eot?#iefix') format('embedded-opentype'),
+		 url($font-path + 'proximanovacond-regular.woff2') format('woff2'),
+		 url($font-path + 'proximanovacond-regular.woff') format('woff'),
+		 url($font-path + 'proximanovacond-regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'proximanovacond-semibold';
+	src: url($font-path + 'proximanovacond-semibold.eot');
+	src: url($font-path + 'proximanovacond-semibold.eot?#iefix') format('embedded-opentype'),
+		 url($font-path + 'proximanovacond-semibold.woff2') format('woff2'),
+		 url($font-path + 'proximanovacond-semibold.woff') format('woff'),
+		 url($font-path + 'proximanovacond-semibold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'proximanovacond-thin-italic';
+	src: url($font-path + 'proximanovacond-thin-italic.eot');
+	src: url($font-path + 'proximanovacond-thin-italic.eot?#iefix') format('embedded-opentype'),
+		 url($font-path + 'proximanovacond-thin-italic.woff2') format('woff2'),
+		 url($font-path + 'proximanovacond-thin-italic.woff') format('woff'),
+		 url($font-path + 'proximanovacond-thin-italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'proximanovacond-light-italic';
+	src: url($font-path + 'proximanovacond-light-italic.eot');
+	src: url($font-path + 'proximanovacond-light-italic.eot?#iefix') format('embedded-opentype'),
+		 url($font-path + 'proximanovacond-light-italic.woff2') format('woff2'),
+		 url($font-path + 'proximanovacond-light-italic.woff') format('woff'),
+		 url($font-path + 'proximanovacond-light-italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'proximanovacond-regular-italic';
+	src: url($font-path + 'proximanovacond-regular-italic.eot');
+	src: url($font-path + 'proximanovacond-regular-italic.eot?#iefix') format('embedded-opentype'),
+		 url($font-path + 'proximanovacond-regular-italic.woff2') format('woff2'),
+		 url($font-path + 'proximanovacond-regular-italic.woff') format('woff'),
+		 url($font-path + 'proximanovacond-regular-italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'proximanovacond-semibold-italic';
+	src: url($font-path + 'proximanovacond-semibold-italic.eot');
+	src: url($font-path + 'proximanovacond-semibold-italic.eot?#iefix') format('embedded-opentype'),
+		 url($font-path + 'proximanovacond-semibold-italic.woff2') format('woff2'),
+		 url($font-path + 'proximanovacond-semibold-italic.woff') format('woff'),
+		 url($font-path + 'proximanovacond-semibold-italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal
+}
+
+// @font-face {
+// 	font-family: 'amplesoft-thin';
+// 	src: url('../fonts-amplesoft/amplesoft-thin.eot');
+// 	src: url('../fonts-amplesoft/amplesoft-thin.eot?#iefix') format('embedded-opentype'),
+// 		 url('../fonts-amplesoft/amplesoft-thin.woff2') format('woff2'),
+// 		 url('../fonts-amplesoft/amplesoft-thin.woff') format('woff'),
+// 		 url('../fonts-amplesoft/amplesoft-thin.ttf') format('truetype');
+// 	font-weight: normal;
+// 	font-style: normal
+// }
+
+// @font-face {
+// 	font-family: 'amplesoft-light';
+// 	src: url('../fonts-amplesoft/amplesoft-light.eot');
+// 	src: url('../fonts-amplesoft/amplesoft-light.eot?#iefix') format('embedded-opentype'),
+// 		 url('../fonts-amplesoft/amplesoft-light.woff2') format('woff2'),
+// 		 url('../fonts-amplesoft/amplesoft-light.woff') format('woff'),
+// 		 url('../fonts-amplesoft/amplesoft-light.ttf') format('truetype');
+// 	font-weight: normal;
+// 	font-style: normal
+// }
+
+// @font-face {
+// 	font-family: 'amplesoft-extralight';
+// 	src: url('../fonts-amplesoft/amplesoft-extralight.eot');
+// 	src: url('../fonts-amplesoft/amplesoft-extralight.eot?#iefix') format('embedded-opentype'),
+// 		 url('../fonts-amplesoft/amplesoft-extralight.woff2') format('woff2'),
+// 		 url('../fonts-amplesoft/amplesoft-extralight.woff') format('woff'),
+// 		 url('../fonts-amplesoft/amplesoft-extralight.ttf') format('truetype');
+// 	font-weight: normal;
+// 	font-style: normal
+// }
+
+// @font-face {
+// 	font-family: 'amplesoft-regular';
+// 	src: url('../fonts-amplesoft/amplesoft-regular.eot');
+// 	src: url('../fonts-amplesoft/amplesoft-regular.eot?#iefix') format('embedded-opentype'),
+// 		 url('../fonts-amplesoft/amplesoft-regular.woff2') format('woff2'),
+// 		 url('../fonts-amplesoft/amplesoft-regular.woff') format('woff'),
+// 		 url('../fonts-amplesoft/amplesoft-regular.ttf') format('truetype');
+// 	font-weight: normal;
+// 	font-style: normal
+// }
+
+// @font-face {
+// 	font-family: 'amplesoft-medium';
+// 	src: url('../fonts-amplesoft/amplesoft-medium.eot');
+// 	src: url('../fonts-amplesoft/amplesoft-medium.eot?#iefix') format('embedded-opentype'),
+// 		 url('../fonts-amplesoft/amplesoft-medium.woff2') format('woff2'),
+// 		 url('../fonts-amplesoft/amplesoft-medium.woff') format('woff'),
+// 		 url('../fonts-amplesoft/amplesoft-medium.ttf') format('truetype');
+// 	font-weight: normal;
+// 	font-style: normal
+// }
+
+// @font-face {
+// 	font-family: 'amplesoft-bold';
+// 	src: url('../fonts-amplesoft/amplesoft-bold.eot');
+// 	src: url('../fonts-amplesoft/amplesoft-bold.eot?#iefix') format('embedded-opentype'),
+// 		 url('../fonts-amplesoft/amplesoft-bold.woff2') format('woff2'),
+// 		 url('../fonts-amplesoft/amplesoft-bold.woff') format('woff'),
+// 		 url('../fonts-amplesoft/amplesoft-bold.ttf') format('truetype');
+// 	font-weight: normal;
+// 	font-style: normal
+// }

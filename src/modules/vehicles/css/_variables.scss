@@ -1,1 +1,21 @@
-$container_width: 940px;
+$font-family: "proximanova-regular", sans-serif;
+$font-path: '/modules/vehicles/fonts/';
+
+
+$container_width: 940px  !default;
+
+$color-font-default: #395b7b !default;
+$color-bg: #f1f4f9 !default;
+$color-bg-blue: #2687E9  !default;
+$color-bg-yellow: #FFFAEB !default;
+$color-bg-light-blue: #D8E9FB !default;
+$color-bg-box-hover: $color-bg-yellow !default;
+$color-bg-box-active: $color-bg-light-blue !default;
+
+$color-border-default: #c9d3dd !default;
+$color-border-box-active: #8bc8f6 !default;
+
+
+$table-bg-thead: #f8fafc !default;
+
+$border-radius-default: 3px;

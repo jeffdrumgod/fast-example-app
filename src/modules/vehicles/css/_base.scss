@@ -1,9 +1,31 @@
 @import "variables";
 
+body {
+	font-family: $font-family;
+	background-color: $color-bg;
+}
+
 .container{
 	max-width: $container_width;
 }
 
-
+@import "buttons";
+@import "controls";
 @import "search";
 @import "pagination";
+@import "fonts";
+@import "table";
+
+
+.main-header{
+	background-color: $color-bg-blue;
+	height: 50px;
+}
+.logo{
+	font-size: 14px;
+	color: #FFF;
+}
+
+.header-complement{
+	padding: 19px 0;
+}
