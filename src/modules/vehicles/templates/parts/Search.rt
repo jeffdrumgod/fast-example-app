@@ -1,0 +1,11 @@
+<fieldset class="search">
+	<legend>Pesquisar</legend>
+	<div class="input-group">
+		<input type="text" class="form-control" placeholder="Pesquisar">
+		<span class="input-group-btn">
+			<button class="btn btn-default" type="button">
+				<span class="fa fa-search" aria-hidden="true"></span>
+			</button>
+		</span>
+	</div>
+</fieldset>

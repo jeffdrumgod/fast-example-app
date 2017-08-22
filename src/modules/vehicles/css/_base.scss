@@ -1,0 +1,9 @@
+@import "variables";
+
+.container{
+	max-width: $container_width;
+}
+
+
+@import "search";
+@import "pagination";

@@ -1,0 +1,17 @@
+<table className="table" rt-stateless>
+	<thead>
+		<tr>
+			<th rt-repeat="col in props.cols" className="{colIndex}" key="{colIndex}">{col.label}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr rt-repeat="item in props.items" key="{item.placa}" id="{item.placa}" key="{item.placa}">
+			<td rt-repeat="col in props.cols" className="{colIndex}" key="{item.placa}-{colIndex}">
+				<rt-virtual rt-if="colIndex === 'option'">
+					<input type="checkbox" onChange="{props.onSelectOption.bind(item)}" />
+				</rt-virtual>
+				{col.modifier ? col.modifier((item[colIndex] || '')) : (item[colIndex] || '')}
+			</td>
+		</tr>
+	</tbody>
+</table>

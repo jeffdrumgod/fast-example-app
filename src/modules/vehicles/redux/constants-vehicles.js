@@ -1,0 +1,8 @@
+const CONTANTS = {
+	REQUEST_LIST: 'app/vehicles/REQUEST_LIST',
+	REQUEST_LIST_SUCCESS: 'app/vehicles/REQUEST_LIST_SUCCESS',
+	REQUEST_LIST_FAILURE: 'app/vehicles/REQUEST_LIST_FAILURE',
+	PAYLOAD: 'app/vehicles/PAYLOAD',
+};
+
+export default CONTANTS;

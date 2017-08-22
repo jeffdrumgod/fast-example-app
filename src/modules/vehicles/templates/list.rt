@@ -1,0 +1,26 @@
+<rt-import name="*" as="Search" from="./parts/Search.rt" />
+<rt-import name="*" as="Table" from="./parts/Table.rt" />
+<rt-import name="*" as="Pagination" from="./parts/Pagination.rt" />
+<div>
+	<div className="row header-complement">
+		<div className="row">
+			<div className="col-sm-3">
+				<button class="button btn-success" type="button">Novo Carro</button>
+			</div>
+			<div className="col-sm-6" />
+			<div className="col-sm-3">
+				<Search />
+			</div>
+		</div>
+	</div>
+	<div className="row vehicles-table">
+		<Table rt-props="{
+			items: this.props.vehicles.items,
+			cols: this.colsToShow,
+			onSelectOption: this.onSelectOption
+		}" />
+	</div>
+	<div className="row vehicles-pagination">
+		<Pagination />
+	</div>
+</div>
