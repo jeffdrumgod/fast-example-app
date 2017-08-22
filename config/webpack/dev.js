@@ -65,6 +65,10 @@ let dev = {
 		// 	openAnalyzer: false,
 		// }),
 		new CopyWebpackPlugin(
+			Config.ExtraOptions.CopyWebpackPluginModules,
+			Config.ExtraOptions.CopyWebpackPluginModulesOptions,
+		),
+		new CopyWebpackPlugin(
 			_.reduce(
 				Config.ExtraOptions.CopyWebpackPlugin,
 				(that, e, i) => {
@@ -86,7 +90,7 @@ let dev = {
 	],
 	devServer: {
 		contentBase        	: [
-			Path.resolve(Config.bundlePath, '..', '..', 'public')
+			Path.resolve(Config.bundlePath)
 		],
 		stats              	: 'errors-only',
 		historyApiFallback 	: true,
