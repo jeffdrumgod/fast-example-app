@@ -259,22 +259,22 @@ const externalsFromNodeModule = (Config) => {
 				amd: 'history',
 			}
 		},
-		{
-			name: 'cssloader',
-			fileName: 'cssloader.js',
-			from: {
-				production: Path.join(Config.node_modules, 'cssloader', 'umd', 'cssloader.min.js'),
-				development: Path.join(Config.node_modules, 'cssloader', 'umd', 'cssloader.js'),
-			},
-			version: ConfigPackage.dependencies['cssloader'],
-			external: true,
-			externalOptions: {
-				root: 'cssloader',
-				commonjs2: 'cssloader',
-				commonjs: 'cssloader',
-				amd: 'cssloader',
-			}
-		},
+		// {
+		// 	name: 'cssloader',
+		// 	fileName: 'cssloader.js',
+		// 	from: {
+		// 		production: Path.join(Config.node_modules, 'cssloader', 'umd', 'cssloader.min.js'),
+		// 		development: Path.join(Config.node_modules, 'cssloader', 'umd', 'cssloader.js'),
+		// 	},
+		// 	version: ConfigPackage.dependencies['cssloader'],
+		// 	external: true,
+		// 	externalOptions: {
+		// 		root: 'cssloader',
+		// 		commonjs2: 'cssloader',
+		// 		commonjs: 'cssloader',
+		// 		amd: 'cssloader',
+		// 	}
+		// },
 	];
 };
 
